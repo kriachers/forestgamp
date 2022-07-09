@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Light.woff2);
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Light.woff2);
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat';
+    color: #1D1F1D;
+    background-color: #F8F8F8;
+}
+
+a {
+    font-family: 'Montserrat';
+    color: #1D1F1D;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0px 156px;
+}
+
+/* сброс стилей */
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+* Упрощаем работу с изображениями */ img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* общие стили для элементов */
+
+h1 {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 90%;
+    letter-spacing: 0.0703846px;
+    color: #1D1F1D;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 90%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0703846px;
+    color: #1D1F1D;
+}
+
+.big-button {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 90%;
+    letter-spacing: 0.0703846px;
+    color: #F8F8F8;
+    border: 1px solid #F8F8F8;
+    padding: 23px 40px;
+
+}
+
+/* HEADER */
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.header__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__social-insta {
+    margin-right: 24px;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__info-phone {
+    margin-right: 27px;
+}
+
+.header__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: solid 1px #858685;
+    border-top: solid 1px #858685;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 60px;
+}
+
+.nav__item {
+    padding-top: 18px;
+    padding-bottom: 20px;
+}
+
+.nav__link {
+    padding-bottom: 30px;
+}
+
+/* сделала падинг, чтобы раширить hover-эффект у ссылки */
+
+.nav__link:hover {
+    color: #314C51;
+}
+
+/* .nav__link:hover + .sub-menu {
+        opacity: 1;
+} */
+
+.sub-menu.active {
+    opacity: 1;
+}
+
+.sub-menu:hover {
+    left: calc(20% - 90px);
+    top: 60px;
+    opacity: 1;
+    pointer-events: all;
+    transition: ease 1s;
+}
+
+.sub-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    left: calc(20% - 90px);
+    top: 55px;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: ease-in-out 200ms, transform 150ms ease-in-out;
+}
+
+/* .nav__link:hover+.sub-menu {
+    position: absolute;
+    left: calc(20% - 90px);
+    top: 60px;
+    opacity: 1;
+    pointer-events: all;
+    transition: ease 1s;
+    padding-top: 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+}  */
+
+.sub-menu {
+    color: #314C51;
+}
+
+
+.sub__item {
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 90%;
+}

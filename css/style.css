@@ -1,0 +1,549 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Light.woff2);
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Light.woff2);
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-ExtraBold.woff);
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Light.woff);
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Medium.woff);
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #1D1F1D;
+    background-color: #F8F8F8;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    font-family: 'Montserrat';
+    color: #1D1F1D;
+    text-decoration: none;
+}
+
+
+
+.container {
+    margin: 0px 156px;
+}
+
+/* сброс стилей */
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+li {
+    padding: 0;
+}
+
+
+* Упрощаем работу с изображениями */ img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* общие стили для элементов */
+
+h1 {
+    font-weight: 300;
+        font-size: 64px;
+        line-height: 90%;  
+        letter-spacing: 0.0703846px;
+        color: #1D1F1D;
+}
+
+h2 {
+    font-weight: 400;
+        font-size: 64px;
+        line-height: 90%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.0703846px;
+        color: #1D1F1D;
+}
+
+.big-button {
+    font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 90%;
+        letter-spacing: 0.0703846px;
+        color: #1D1F1D;
+        border: 1px solid #1D1F1D;
+        padding: 23px 40px;
+        background-color: #F8F8F8;
+        border-radius: 30px;
+            transition: ease-in-out 0.5s;
+}
+
+.big-button:hover {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 90%;
+    letter-spacing: 0.0703846px;
+    color: #F8F8F8;
+    border: 1px solid #314C51;
+    padding: 23px 40px;
+    background-color: #314C51;
+    border-radius: 30px;
+    transition: ease-in-out 0.5s;
+}
+
+.full-width-button {
+    font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #F8F8F8;
+        border: 0.5px solid #F8F8F8;
+        border-radius: 15px;
+        padding-bottom: 6px;
+        padding-top: 4px;
+        display: block;
+        background-color: rgba(28, 28, 28, 0);
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+transition: ease-in-out 0.5s;
+}
+
+.full-width-button:hover {
+    border: 0.5px solid #1D1F1D;
+    background-color: #1D1F1D; 
+    transition: ease-in-out 0.5s;
+}
+
+
+/* HEADER */
+
+.header {
+    margin-bottom: 127px;
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.header__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__social-insta {
+    margin-right: 24px;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__info-phone {
+    margin-right: 27px;
+}
+
+.header__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: solid 1px #858685;
+    border-top: solid 1px #858685;
+}
+
+.nav__item:not(:last-child) {
+margin-right: 60px;
+}
+
+.nav__item {
+    padding-top: 18px;
+    padding-bottom: 20px;
+}
+
+.nav__link {
+    padding-bottom: 30px;
+}
+/* сделала падинг, чтобы раширить hover-эффект у ссылки */
+
+.nav__link:hover {
+    color: #314C51;
+}
+
+
+.sub-menu {
+    z-index: 10;
+    /* чтобы срабатывал active в js тк его до этого перекрывал другой див */
+    display: flex;
+    padding: 20px 20px;
+    align-items: center ;
+    flex-direction: column;
+    top: 50px;
+    background-color: #F8F8F8;
+    position: absolute;
+    pointer-events: none;
+    transition: ease-in-out 200ms, transform 150ms ease-in-out;
+    opacity: 0; 
+    visibility: hidden;
+
+}
+
+
+.sub-menu-areas.active {
+    position: absolute;
+        top: 60px;
+        opacity: 1;
+        pointer-events: all;
+        transition: ease 1s;
+        padding: 20px 20px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+        visibility: visible;
+        
+}
+
+.sub-menu {
+    color: #314C51;
+}
+
+
+.sub__item {
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 90%;
+}
+
+/* HERO */
+
+.hero {
+margin-bottom: 155px;
+}
+
+.hero__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.hero__video {
+    max-width: 447px;
+    margin-right: 72px;
+}
+
+
+svg.mask  {
+    font-family: 'Montserrat';
+    font-size: 600px;
+    font-weight: 600;
+    display: block;
+    float: left;
+    position: absolute;
+    top: 271px;
+}
+
+
+ svg rect {
+    fill: #F8F8F8;
+    mask: url(#mask);
+    width: 447px;
+    height: 428px;
+}
+
+video {
+    width: 447px;
+    height: 428px;
+    object-fit: cover;
+}
+
+.hero__info {
+    align-self: center;
+}
+
+.hero__title {
+    margin-bottom: 19px;
+}
+
+.hero__descr {
+    margin-bottom: 37px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.1px;
+}
+
+/* BENEFITS */
+
+.full_bg {
+width: 100%;
+position: absolute;
+z-index: -5;
+/* height: 1994px; */
+/* height: calc(#{width} * 1.318); */
+max-height: 1994px;
+}
+
+.benefits-parallax {
+max-width: 100%;
+position: relative;
+height: 1994px;
+}
+
+.svg__main-wrapper {
+    max-width: 41%;
+}
+
+.benefits {
+    padding-bottom: 160px;
+    z-index: 10;
+}
+
+.benefits__flex {
+    display: flex;
+}
+
+.benefites__title {
+font-weight: 400;
+font-size: 64px;
+line-height: 90%;
+margin-bottom: 14px;
+}
+
+.green {
+    color: #314C51;
+}
+
+.benefits__block {
+    width: 386px;
+    align-self: center;
+}
+
+.benefits__block:not(:last-child) {
+    margin-right: 48px;
+}
+
+.forest-pic {
+    margin-bottom: 28.75px;
+}
+
+.sea-pic {
+    margin-bottom: 31.51px;
+}
+
+.air-pic {
+    margin-bottom: 26.08px;
+}
+
+.benefits__title {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.benefits__descr {
+    font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0.1px;
+}
+
+/* MAP */
+
+.map {
+    max-width: 100%;
+    /* position: relative; */
+}
+
+
+.map-part-second {
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+.map-part:hover {
+    fill-opacity: 0.3;
+    transition: 0.2s ease-in-out;
+    /* cursor: url("../img/parallax/map/coursor.svg"), default; */
+}
+
+
+.svg__wrapper {
+    position: relative;
+    /* РЕЛАТИВ ОН ДЛЯ СВОЕГО РЕБЕНКА */
+    top: 800px;
+    left: 73%;
+    /* А ЭТИ ЦИФРЫ ОТНОСИТЕЛЬНО СВОЕГО РОДИТЕЛЯ */
+}
+
+.box-first {
+    width: 247px;
+    height: 201px;
+    background: rgba(152, 152, 152, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 8px 17px;
+    opacity: 0;
+    display:none;
+    visibility: hidden;
+    position: absolute;
+    transition: ease 0.5s;
+    top: 50px;
+    left: 30%;
+    z-index: -1;
+            /* right: 0;
+            bottom: 0; */
+}
+
+.box-first.active {
+            width: 247px;
+            height: 201px;
+            background: rgba(152, 152, 152, 0.25);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 8px 17px;
+            visibility: visible;
+            position: absolute;
+            display: block;
+            transition: ease 0.7s;
+            opacity: 1;
+            top: 50px;
+            left: 100%;
+            z-index: 0;
+
+}
+
+.box-first::before {
+    content: url('../img/parallax/map/coursor.svg');
+    position: absolute;
+    left: -15%;
+    top: 0;
+}
+
+.box__table-title {
+    margin-bottom: 29px;
+}
+
+.box__table-info {
+    margin-bottom: 29px;
+}
+
+
+.box__category {
+    font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        color: #F8F8F8;
+}
+
+
+
+.box__data,
+.box__status {
+    font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #F8F8F8;
+        text-align: right;
+}
+
+.box__name {
+    font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        color: #F8F8F8;
+}
+

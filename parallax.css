@@ -1,0 +1,76 @@
+/* PARALLAX */
+
+/* .parallax {
+    min-height: 200vh;
+    position: relative;
+} */
+
+.scene {
+    position: relative;
+    height: 200vh;
+}
+
+.images-parallax__item {
+    width: 100%;
+}
+
+.layer {
+    position: absolute;
+    left: -10%;
+    top: 0;
+    width: 110%;
+    height: 110%;
+}
+
+/* .layer-bg {
+    background: url('../img/parallax/main.jpg') top no-repeat;
+    background-color: #314C51;
+    background-size: cover;
+    top: -30%;
+} */
+
+.layer-river {
+    background: url("../img/parallax/full-bg.png") top no-repeat;
+    /* background-size: contain; */
+    top: -40%;
+    z-index: 2;
+}
+
+/* 
+.layer-gradient {
+    background: url("../img/parallax/gradient.png") top no-repeat;
+    background-size: contain;
+    top: -50%;
+    z-index: 3;
+}
+
+.layer-earth{
+    background: url("../img/parallax/earth.png") top no-repeat;
+    background-size: contain;
+}
+
+.layer-earth-road {
+    background: url("../img/parallax/road.png") top no-repeat;
+    background-size: contain;
+    top: 20%;
+    z-index: 2;
+}
+
+.layer-forest {
+    background: url("../img/parallax/forest-prlxx.png") top no-repeat;
+    background-size: contain;
+    z-index: 3;
+    top: 50%;
+} */
+
+/* // PARALLAX
+
+let layer=document.querySelectorAll('.layer');
+
+
+function parallax(event) {
+    this.querySelectorAll('.layer').forEach(layer=> {
+            let speed=layer.getAttribute('data-speed');
+            layer.style.transform=`translateY(${event.clientY*speed/1000}px)`
+        });
+} */
